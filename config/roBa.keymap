@@ -148,7 +148,8 @@
             bindings 
                 = <&macro_press &kp LGUI>, <&macro_tap &kp R>, <&macro_release &kp LGUI>
                 , <&macro_wait_time 600>
-                , <&macro_types_kind "C:\Users\220877\Documents\GSSPC_RMT.rdp">
+                // パス内の \ を \\ に修正しています
+                , <&macro_types_kind "C:\\Users\\220877\\Documents\\GSSPC_RMT.rdp">
                 , <&macro_tap &kp ENTER>
                 , <&macro_wait_time 3000>
                 , <&macro_tap &kp TAB &kp TAB &kp TAB>
