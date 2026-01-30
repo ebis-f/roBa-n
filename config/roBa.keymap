@@ -76,6 +76,20 @@
             bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp NUMBER_2 &kp N7>;
             label = "PW";
         };
+
+        TMPGMW_Cut: TMPGMW_Cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp L>;
+            label = "TMPGMW_CUT";
+        };
+
+        TMPGMW_KUHAKUGYO: TMPGMW_KUHAKUGYO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp SPACE &kp SEMI &kp SPACE &kp SPACE &kp SPACE &kp RIGHT_BRACKET>;
+            label = "TMPGMW_KUHAKUGYO";
+        };
     };
 
     behaviors {
