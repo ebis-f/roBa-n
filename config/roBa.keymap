@@ -202,7 +202,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W  &kp E             &kp R        &kp T                                                &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp Q             &kp W  &kp E             &kp R        &kp T                                                &kp Y        &kp U  &kp I     &kp O     &mt LC(P) P
 &kp A             &kp S  &kp D             &kp F        &kp G            &kp LS(LG(S))      &kp COMMA        &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X  &kp C             &kp V        &kp B            &kp AT_SIGN        &kp PERIOD       &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_ALT SLASH
 &kp LCTRL         &PW    &lt 6 UNDERSCORE  &lt 2 SPACE  &lt 5 LS(SPACE)  &lt 3 TAB          &lt 7 RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
@@ -213,19 +213,19 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &none   &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &none   &none   &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp DELETE
+&kp ESCAPE  &trans  &trans  &trans  &trans                      &none   &kp F7  &kp F8  &kp F9  &kp F10
+&trans      &trans  &trans  &trans  &trans  &trans      &none   &none   &kp F4  &kp F5  &kp F6  &kp F11
+&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
+&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp DELETE
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_N0                                               &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&kp PLUS   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI   &kp EQUAL                    &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans     &trans           &trans           &trans           &trans     &trans                       &trans          &HANKAKU_ENTER                                                             &kp PIPE
+&kp ESCAPE  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_N0                                               &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SLASH   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
+&kp PLUS    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI   &kp EQUAL                    &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
+&trans      &trans           &trans           &trans           &trans     &trans                       &trans          &HANKAKU_ENTER                                                             &kp PIPE
             >;
         };
 
@@ -269,10 +269,10 @@
 
         GSSWORK {
             bindings = <
-&trans  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                        &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans             &trans      &trans     &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans             &trans      &trans     &GSS_RMT      &trans  &trans                          &trans
+&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                                 &trans     &kp N7        &kp N8        &kp N9        &kp N0
+&trans      &trans           &trans             &kp LS(F)   &trans     &trans        &kp LA(LS(F12))  &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
+&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans        &GSSMAP_RM       &kp LS(F)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans      &trans           &trans             &trans      &trans     &GSS_RMT      &trans           &trans                                               &trans
             >;
         };
     };
