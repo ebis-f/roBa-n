@@ -141,29 +141,40 @@
         };
 		
 		GSS_RMT: GSS_RMT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings 
-                = <&macro_press &kp LGUI>, <&macro_tap &kp R>, <&macro_release &kp LGUI>
-                , <&macro_wait_time 600>
-                // パス内の \ を \\ に修正しています
-                , <&macro_types_kind "C:\\Users\\220877\\Documents\\GSSPC_RMT.rdp">
-                , <&macro_tap &kp ENTER>
-                , <&macro_wait_time 3000>
-                , <&macro_tap &kp TAB &kp TAB &kp TAB>
-                , <&macro_tap &kp ENTER &kp ENTER>
-                , <&macro_press &kp LGUI>, <&macro_tap &kp PAUSE_BREAK>, <&macro_release &kp LGUI>
-                , <&macro_tap &kp TAB>
-                , <&macro_press &kp LGUI>, <&macro_tap &kp INS>, <&macro_release &kp LGUI>
-                , <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
-                , <&macro_tap &kp ENTER>
-                , <&macro_wait_time 10000>
-                , <&macro_tap &kp TAB>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp TAB>
-                , <&macro_tap &kp ENTER>;
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings 
+            // 1. Win + R
+            = <&macro_press &kp LGUI>, <&macro_tap &kp R>, <&macro_release &kp LGUI>
+            , <&macro_wait_time 600>
+            
+            // 2. パスを1文字ずつ入力 (C:\Users\220877\Documents\GSSPC_RMT.rdp)
+            // これにより、パースエラーの主要因である「文字列内のバックスラッシュ」を排除します
+            , <&macro_tap &kp C &kp LS(SEMI) &kp BSLH> // C:\
+            , <&macro_tap &kp U &kp S &kp E &kp R &kp S &kp BSLH> // Users\
+            , <&macro_tap &kp N2 &kp N2 &kp N0 &kp N8 &kp N7 &kp N7 &kp BSLH> // 220877\
+            , <&macro_tap &kp D &kp O &kp C &kp U &kp M &kp E &kp N &kp T &kp S &kp BSLH> // Documents\
+            , <&macro_tap &kp G &kp S &kp S &kp P &kp C &kp UNDER &kp R &kp M &kp T &kp DOT &kp R &kp D &kp P>
+            , <&macro_tap &kp ENTER>
+            
+            // 3. 待機 & 各種操作
+            , <&macro_wait_time 3000>
+            , <&macro_tap &kp TAB &kp TAB &kp TAB>
+            , <&macro_tap &kp ENTER &kp ENTER>
+            
+            // 4. Win + Pause (もしエラーが出るなら PAUSE_BREAK を PAUSE に)
+            , <&macro_press &kp LGUI>, <&macro_tap &kp PAUSE_BREAK>, <&macro_release &kp LGUI>
+            , <&macro_tap &kp TAB>
+            
+            // 5. Win + Insert (もしエラーが出るなら INS を INSERT に)
+            , <&macro_press &kp LGUI>, <&macro_tap &kp INS>, <&macro_release &kp LGUI>
+            
+            , <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
+            , <&macro_tap &kp ENTER>
+            , <&macro_wait_time 10000>
+            , <&macro_tap &kp TAB &kp SPACE &kp TAB &kp ENTER>;
         };
     };
 
