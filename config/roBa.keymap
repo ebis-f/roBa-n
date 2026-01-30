@@ -90,6 +90,13 @@
             bindings = <&kp LEFT_BRACKET &kp SPACE &kp SEMI &kp SPACE &kp SPACE &kp SPACE &kp RIGHT_BRACKET>;
             label = "TMPGMW_KUHAKUGYO";
         };
+
+        TMPGMW_KASICUT: TMPGMW_KASICUT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(END)) &kp LC(X)>;
+            label = "TMPGMW_KASICUT";
+        };
     };
 
     behaviors {
@@ -157,10 +164,10 @@
 
         SCROLL {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans                                   &trans            &trans    &trans    &trans    &trans
-&trans      &trans  &trans  &trans  &trans  &trans      &trans               &trans            &mkp MB5  &trans    &trans    &trans
-&trans      &trans  &trans  &trans  &trans  &trans      &trans               &trans            &mkp MB4  &mkp MB1  &mkp MB2  &trans
-&trans      &trans  &trans  &trans  &trans  &trans      &kp INTERNATIONAL_4  &kp INT_MUHENKAN                                &trans
+&kp ESCAPE  &trans           &TMPGMW_Cut  &trans             &trans                                   &trans            &trans    &trans    &trans    &trans
+&trans      &TMPGMW_KASICUT  &trans       &TMPGMW_KUHAKUGYO  &trans  &trans      &trans               &trans            &mkp MB5  &trans    &trans    &trans
+&trans      &trans           &trans       &trans             &trans  &trans      &trans               &trans            &mkp MB4  &mkp MB1  &mkp MB2  &trans
+&PW         &trans           &trans       &trans             &trans  &trans      &kp INTERNATIONAL_4  &kp INT_MUHENKAN                                &trans
             >;
         };
 
