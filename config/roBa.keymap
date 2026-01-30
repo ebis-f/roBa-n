@@ -141,6 +141,53 @@
         };
     };
 
+macros {
+    GSS_RMT: GSS_RMT {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings 
+            // 1. Win + R で「ファイル名を指定して実行」を開く
+            = <&macro_press &kp LGUI>, <&macro_tap &kp R>, <&macro_release &kp LGUI>
+            , <&macro_wait_time 600>
+            
+            // 2. RDPファイルのパスを入力して実行
+            // ※US配列ならtypes_kindで記号もそのまま入力可能です
+            , <&macro_types_kind "C:\Users\220877\Documents\GSSPC_RMT.rdp">
+            , <&macro_tap &kp ENTER>
+            
+            // 3. リモートデスクトップの起動を待機（3秒）
+            , <&macro_wait_time 3000>
+            
+            // 4. TABを三回 -> ENTERを二回
+            , <&macro_tap &kp TAB &kp TAB &kp TAB>
+            , <&macro_tap &kp ENTER &kp ENTER>
+            
+            // 5. Windows + Pause
+            , <&macro_press &kp LGUI>, <&macro_tap &kp PAUSE_BREAK>, <&macro_release &kp LGUI>
+            
+            // 6. TABを一回
+            , <&macro_tap &kp TAB>
+            
+            // 7. Windows + Insert
+            , <&macro_press &kp LGUI>, <&macro_tap &kp INS>, <&macro_release &kp LGUI>
+            
+            // 8. TABを四回 -> ENTERを一回
+            , <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
+            , <&macro_tap &kp ENTER>
+            
+            // 9. 10秒待機
+            , <&macro_wait_time 10000>
+            
+            // 10. TAB -> SPACE -> TAB -> ENTER
+            , <&macro_tap &kp TAB>
+            , <&macro_tap &kp SPACE>
+            , <&macro_tap &kp TAB>
+            , <&macro_tap &kp ENTER>;
+    };
+};
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
