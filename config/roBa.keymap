@@ -139,9 +139,8 @@
             bindings = <&kp LS(R) &kp LS(M)>;
             label = "GSSMAP_RM";
         };
-    };
 
-　        GSS_RMT: GSS_RMT {
+        GSS_RMT: GSS_RMT {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         wait-ms = <40>;
