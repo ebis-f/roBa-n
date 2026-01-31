@@ -119,6 +119,13 @@
             label = "GSS_LOCALACCOUNT";
         };
 
+        GSS_ADMIN: GSS_ADMIN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp D &kp M &kp I &kp N &kp ENTER>;
+            label = "GSS_ADMIN";
+        };
+
         GSS_WIFI: GSS_WIFI {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -132,75 +139,42 @@
             bindings = <&kp LS(R) &kp LS(M)>;
             label = "GSSMAP_RM";
         };
-
-        GSS_RMT: GSS_RMT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp R>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_wait_time 600>,
-                <&macro_tap>,
-                <&kp C &kp LS(SEMI) &kp BSLH>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_wait_time 3000>,
-                <&macro_tap>,
-                <&kp TAB &kp TAB &kp TAB>,
-                <&macro_tap>,
-                <&kp ENTER &kp ENTER>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp PAUSE_BREAK>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp INS>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp TAB &kp TAB &kp TAB &kp TAB>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_wait_time 10000>,
-                <&macro_tap>,
-                <&kp TAB &kp SPACE &kp TAB &kp ENTER>;
-        };
-
-        GSS_ADMIN: GSS_ADMIN {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                /* admin */
-                <&macro_tap &kp A>,
-                <&macro_tap &kp D>,
-                <&macro_tap &kp M>,
-                <&macro_tap &kp I>,
-                <&macro_tap &kp N>,
-
-                /* 15秒待機 */
-                <&macro_pause_ms 15000>,
-
-                /* Enter を1秒毎に4回 */
-                <&macro_tap &kp ENTER>,
-                <&macro_pause_ms 1000>,
-                <&macro_tap &kp ENTER>,
-                <&macro_pause_ms 1000>,
-                <&macro_tap &kp ENTER>,
-                <&macro_pause_ms 1000>,
-                <&macro_tap &kp ENTER>;
+		
+		GSS_RMT: GSS_RMT {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings 
+            // 1. Win + R
+            = <&macro_press &kp LGUI>, <&macro_tap &kp R>, <&macro_release &kp LGUI>
+            , <&macro_wait_time 600>
+            
+            // 2. パスを1文字ずつ入力 (C:\Users\220877\Documents\GSSPC_RMT.rdp)
+            // これにより、パースエラーの主要因である「文字列内のバックスラッシュ」を排除します
+            , <&macro_tap &kp C &kp LS(SEMI) &kp BSLH> // C:\
+            , <&macro_tap &kp U &kp S &kp E &kp R &kp S &kp BSLH> // Users\
+            , <&macro_tap &kp N2 &kp N2 &kp N0 &kp N8 &kp N7 &kp N7 &kp BSLH> // 220877\
+            , <&macro_tap &kp D &kp O &kp C &kp U &kp M &kp E &kp N &kp T &kp S &kp BSLH> // Documents\
+            , <&macro_tap &kp G &kp S &kp S &kp P &kp C &kp UNDER &kp R &kp M &kp T &kp DOT &kp R &kp D &kp P>
+            , <&macro_tap &kp ENTER>
+            
+            // 3. 待機 & 各種操作
+            , <&macro_wait_time 3000>
+            , <&macro_tap &kp TAB &kp TAB &kp TAB>
+            , <&macro_tap &kp ENTER &kp ENTER>
+            
+            // 4. Win + Pause (もしエラーが出るなら PAUSE_BREAK を PAUSE に)
+            , <&macro_press &kp LGUI>, <&macro_tap &kp PAUSE_BREAK>, <&macro_release &kp LGUI>
+            , <&macro_tap &kp TAB>
+            
+            // 5. Win + Insert (もしエラーが出るなら INS を INSERT に)
+            , <&macro_press &kp LGUI>, <&macro_tap &kp INS>, <&macro_release &kp LGUI>
+            
+            , <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
+            , <&macro_tap &kp ENTER>
+            , <&macro_wait_time 10000>
+            , <&macro_tap &kp TAB &kp SPACE &kp TAB &kp ENTER>;
         };
     };
 
@@ -220,7 +194,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W  &kp E             &kp R        &kp T                                                &kp Y        &kp U  &kp I     &kp O     &mt LC(P) P
+&kp Q             &kp W  &kp E             &kp R        &kp T                                                &kp Y        &kp U  &kp I     &kp O     &kp P
 &kp A             &kp S  &kp D             &kp F        &kp G            &kp LS(LG(S))      &kp COMMA        &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X  &kp C             &kp V        &kp B            &kp AT_SIGN        &kp PERIOD       &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_ALT SLASH
 &kp LCTRL         &PW    &lt 6 UNDERSCORE  &lt 2 SPACE  &lt 5 LS(SPACE)  &lt 3 TAB          &lt 7 RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
@@ -231,28 +205,28 @@
 
         FUNCTION {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans                      &none   &kp F7  &kp F8  &kp F9  &kp F10
-&trans      &trans  &trans  &trans  &trans  &trans      &none   &none   &kp F4  &kp F5  &kp F6  &kp F11
-&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp DELETE
+&trans  &trans  &trans  &trans  &trans                      &none   &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &none   &none   &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp DELETE
             >;
         };
 
         NUM {
             bindings = <
-&kp ESCAPE  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_N0                                               &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&kp PLUS    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI   &kp EQUAL                    &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans      &trans           &trans           &trans           &trans     &trans                       &trans          &HANKAKU_ENTER                                                             &kp PIPE
+&kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_N0                                               &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
+&kp PLUS   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI   &kp EQUAL                    &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
+&trans     &trans           &trans           &trans           &trans     &trans                       &trans          &HANKAKU_ENTER                                                             &kp PIPE
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE  &none   &none   &none   &trans                            &trans           &trans          &trans          &trans     &kp HOME
-&none       &none   &none   &none   &none   &trans      &trans        &trans           &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT  &kp END
-&none       &none   &trans  &none   &trans  &trans      &kp LG(LEFT)  &kp LG(RIGHT)    &trans          &kp DOWN_ARROW  &trans     &trans
-&trans      &trans  &trans  &trans  &trans  &trans      &trans        &kp RIGHT_SHIFT                                             &kp DELETE
+&kp ESCAPE  &none   &none   &none   &trans                            &trans         &trans          &trans          &trans     &kp HOME
+&none       &none   &none   &none   &none   &trans      &trans        &trans         &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT  &kp END
+&none       &none   &trans  &none   &trans  &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &trans          &kp DOWN_ARROW  &trans     &trans
+&trans      &trans  &trans  &trans  &trans  &trans      &trans        &trans                                                    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -287,10 +261,10 @@
 
         GSSWORK {
             bindings = <
-&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                                 &trans     &kp N7        &kp N8        &kp N9        &kp N0
-&trans      &trans           &trans             &kp LS(F)   &trans     &trans        &kp LA(LS(F12))  &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
-&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans        &GSSMAP_RM       &kp LS(F)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
-&trans      &trans           &trans             &trans      &trans     &GSS_RMT      &trans           &trans                                               &trans
+&trans  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans             &trans      &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans             &trans      &trans     &trans      &trans  &trans                          &trans
             >;
         };
     };
