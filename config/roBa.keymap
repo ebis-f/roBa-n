@@ -195,6 +195,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        macro_tap_behavior: macro_tap_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MACRO_TAP_BEHAVIOR";
+            bindings = <&kp>, <&PW>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <34>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -202,10 +212,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W  &kp E             &kp R        &kp T                                                &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S  &kp D             &kp F        &kp G            &kp LS(LG(S))      &kp COMMA        &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X  &kp C             &kp V        &kp B            &kp AT_SIGN        &kp PERIOD       &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_ALT SLASH
-&mt LCTRL INS     &PW    &lt 6 UNDERSCORE  &lt 2 SPACE  &lt 5 LS(SPACE)  &lt 3 TAB          &lt 7 RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
+&kp Q                        &kp W  &kp E             &kp R        &kp T                                                &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A                        &kp S  &kp D             &kp F        &kp G            &kp LS(LG(S))      &kp COMMA        &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
+&mt LEFT_SHIFT Z             &kp X  &kp C             &kp V        &kp B            &kp AT_SIGN        &kp PERIOD       &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_ALT SLASH
+&macro_tap_behavior LCTRL 0  &PW    &lt 6 UNDERSCORE  &lt 2 SPACE  &lt 5 LS(SPACE)  &lt 3 TAB          &lt 7 RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
