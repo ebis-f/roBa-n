@@ -176,6 +176,31 @@
             , <&macro_wait_time 10000>
             , <&macro_tap &kp TAB &kp SPACE &kp TAB &kp ENTER>;
         };
+
+        GSS_ADMIN2: GSS_ADMIN2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                /* admin */
+                <&macro_tap &kp A>,
+                <&macro_tap &kp D>,
+                <&macro_tap &kp M>,
+                <&macro_tap &kp I>,
+                <&macro_tap &kp N>,
+
+                /* 15秒待機 */
+                <&macro_pause_ms 15000>,
+
+                /* Enter を1秒毎に4回 */
+                <&macro_tap &kp ENTER>,
+                <&macro_pause_ms 1000>,
+                <&macro_tap &kp ENTER>,
+                <&macro_pause_ms 1000>,
+                <&macro_tap &kp ENTER>,
+                <&macro_pause_ms 1000>,
+                <&macro_tap &kp ENTER>;
+        };
     };
 
     behaviors {
