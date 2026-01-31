@@ -189,16 +189,10 @@
                 <&macro_tap &kp I>,
                 <&macro_tap &kp N>,
 
-                /* 15秒待機 */
-                <&macro_pause_ms 15000>,
-
-                /* Enter を1秒毎に4回 */
+                /* Enter を4回連続 */
                 <&macro_tap &kp ENTER>,
-                <&macro_pause_ms 1000>,
                 <&macro_tap &kp ENTER>,
-                <&macro_pause_ms 1000>,
                 <&macro_tap &kp ENTER>,
-                <&macro_pause_ms 1000>,
                 <&macro_tap &kp ENTER>;
         };
     };
