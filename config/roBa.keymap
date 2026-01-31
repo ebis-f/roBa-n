@@ -223,22 +223,20 @@ default_layer {
         &kp AT_SIGN &kp PERIOD  &kp N       &kp M
         &mkp MB1    &mkp MB2
         &mt RIGHT_ALT &kp SLASH
-        /* 修正したMod-Tap / マクロ行 */
+        /* 修正済み：Mod-Tap + マクロ */
         &mt PW &kp LCTRL,
-        &kp LEFT_WIN
-        &lt 6 UNDERSCORE
-        &lt 2 SPACE
-        &lt 5 LS(SPACE)
-        &lt 3 TAB
-        &lt 7 RIGHT_WIN
-        &lt 1 ENTER
+        &LEFT_WIN,
+        &lt 6 UNDERSCORE,
+        &lt 2 SPACE,
+        &lt 5 LS(SPACE),
+        &lt 3 TAB,
+        &lt 7 RIGHT_WIN,
+        &lt 1 ENTER,
         &kp BACKSPACE
     >;
 
     sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
 };
-
-        };
 
         FUNCTION {
             bindings = <
