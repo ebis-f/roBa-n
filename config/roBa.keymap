@@ -119,13 +119,6 @@
             label = "GSS_LOCALACCOUNT";
         };
 
-        GSS_ADMIN: GSS_ADMIN {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp D &kp M &kp I &kp N &kp ENTER>;
-            label = "GSS_ADMIN";
-        };
-
         GSS_WIFI: GSS_WIFI {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
