@@ -154,7 +154,7 @@
                 <&kp LGUI>,
                 <&macro_wait_time 600>,
                 <&macro_tap>,
-                <&kp C &kp LS(SEMI) &kp BSLH>,
+                <&kp C &kp LS(SEMI) &kp BSLH &kp LS(U) &kp S &kp E &kp R &kp S &kp NON_US_BACKSLASH &kp NUMBER_2 &kp NUMBER_2 &kp N0 &kp N8 &kp N7 &kp N7 &kp NON_US_BACKSLASH &kp LS(D) &kp O &kp C &kp U &kp M &kp E &kp N &kp T &kp S &kp NON_US_BACKSLASH &kp LS(G) &kp LS(S) &kp LS(S) &kp LS(P) &kp LS(C) &kp UNDERSCORE &kp LS(R) &kp LS(M) &kp LS(T) &kp PERIOD &kp R &kp D &kp P>,
                 <&macro_tap>,
                 <&kp ENTER>,
                 <&macro_wait_time 3000>,
