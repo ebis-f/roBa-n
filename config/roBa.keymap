@@ -139,6 +139,13 @@
             bindings = <&kp LS(R) &kp LS(M)>;
             label = "GSSMAP_RM";
         };
+
+        TMPGMW_F8: TMPGMW_F8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F8 &kp TAB &kp TAB &kp END>;
+            label = "TMPGMW_F8";
+        };
     };
 
     behaviors {
@@ -216,10 +223,10 @@
 
         SCROLL {
             bindings = <
-&kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                        &trans    &trans    &trans    &trans    &trans
-&trans      &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &trans    &trans    &mkp MB5  &trans    &trans    &trans
-&trans      &trans           &trans            &trans             &trans            &trans      &trans    &trans    &mkp MB4  &mkp MB1  &mkp MB2  &trans
-&PW         &trans           &trans            &trans             &trans            &trans      &kp INT5  &kp INT4                                &kp DELETE
+&kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                        &kp F6    &kp F7    &TMPGMW_F8  &trans    &trans
+&trans      &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &trans    &trans    &mkp MB5  &trans      &trans    &trans
+&trans      &trans           &trans            &trans             &trans            &trans      &trans    &trans    &mkp MB4  &mkp MB1    &mkp MB2  &trans
+&PW         &trans           &trans            &trans             &trans            &trans      &kp INT5  &kp INT4                                  &kp DELETE
             >;
         };
 
