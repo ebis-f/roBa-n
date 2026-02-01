@@ -178,10 +178,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &none   &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &none   &none   &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp DELETE
+&kp ESCAPE   &kp N7        &kp N8        &kp N9        &kp N0                                         &none   &kp F7  &kp F8  &kp F9  &kp F10
+&trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON  &trans              &kp UNDERSCORE  &none   &kp F4  &kp F5  &kp F6  &kp F11
+&kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &kp UNDERSCORE      &kp PERIOD      &trans  &kp F1  &kp F2  &kp F3  &kp F12
+&trans       &trans        &trans        &trans        &trans     &trans              &trans          &trans                          &kp DELETE
             >;
         };
 
@@ -219,7 +219,7 @@
 &kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                        &trans    &trans    &trans    &trans    &trans
 &trans      &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &trans    &trans    &mkp MB5  &trans    &trans    &trans
 &trans      &trans           &trans            &trans             &trans            &trans      &trans    &trans    &mkp MB4  &mkp MB1  &mkp MB2  &trans
-&PW         &trans           &trans            &trans             &trans            &trans      &kp INT5  &kp INT4                                &trans
+&PW         &trans           &trans            &trans             &trans            &trans      &kp INT5  &kp INT4                                &kp DELETE
             >;
         };
 
@@ -237,7 +237,7 @@
 &trans  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                          &trans       &kp N7        &kp N8        &kp N9        &kp N0
 &trans  &trans           &trans             &trans      &trans     &trans      &trans      &trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
 &trans  &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans      &kp PERIOD  &kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&trans  &trans           &trans             &trans      &trans     &none       &trans      &trans                                                 &trans
+&trans  &trans           &trans             &trans      &trans     &none       &trans      &trans                                                 &kp DEL
             >;
         };
     };
