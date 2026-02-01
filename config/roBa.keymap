@@ -246,6 +246,8 @@
 &trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans      &kp PERIOD  &kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
 &trans      &trans           &trans             &trans      &trans     &none       &trans      &trans                                                 &kp DEL
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
         };
     };
 };
