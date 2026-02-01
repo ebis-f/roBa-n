@@ -194,10 +194,10 @@
 
         NUM {
             bindings = <
-&kp MINUS  &kp N7        &kp N8        &kp N9        &kp N0                                                  &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMI   &kp EQUAL                    &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp INT_YEN
-&trans     &trans        &trans        &trans        &trans     &trans                       &trans          &HANKAKU_ENTER                                                             &kp PIPE
+&kp ESCAPE  &kp N7        &kp N8        &kp N9        &kp N0                                    &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SLASH   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON  &kp MINUS      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
+&kp PLUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMI   &kp EQUAL      &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp INT_YEN
+&trans      &trans        &trans        &trans        &trans     &trans         &trans          &HANKAKU_ENTER                                                             &kp PIPE
             >;
         };
 
@@ -224,8 +224,8 @@
         SCROLL {
             bindings = <
 &kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                             &kp F6    &kp F7    &TMPGMW_F8  &kp UP_ARROW  &kp HOME
-&trans      &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)   &trans    &mkp MB5  &kp LEFT    &kp DOWN      &kp RIGHT
-&trans      &trans           &trans            &trans             &trans            &trans      &kp LG(RIGHT)  &trans    &mkp MB4  &mkp MB1    &mkp MB2      &kp END
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)   &trans    &mkp MB5  &kp LEFT    &kp DOWN      &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LG(RIGHT)  &trans    &mkp MB4  &mkp MB1    &mkp MB2      &kp END
 &PW         &trans           &trans            &trans             &trans            &trans      &kp INT5       &kp INT4                                      &kp DELETE
             >;
         };
@@ -241,10 +241,10 @@
 
         GSSWORK {
             bindings = <
-&trans  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                              &trans       &kp N7        &kp N8        &kp N9        &kp N0
-&trans  &trans           &trans             &trans      &trans     &trans      &kp UNDERSCORE  &trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
-&trans  &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans      &kp PERIOD      &kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&trans  &trans           &trans             &trans      &trans     &none       &trans          &trans                                                 &kp DEL
+&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                              &trans       &kp N7        &kp N8        &kp N9        &kp N0
+&trans      &trans           &trans             &trans      &trans     &trans      &kp UNDERSCORE  &trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
+&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans      &kp PERIOD      &kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&trans      &trans           &trans             &trans      &trans     &none       &trans          &trans                                                 &kp DEL
             >;
         };
     };
