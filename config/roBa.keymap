@@ -87,7 +87,7 @@
         TMPGMW_KUHAKUGYO: TMPGMW_KUHAKUGYO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INTERNATIONAL_5 &kp LEFT_BRACKET &kp SPACE &kp SEMI &kp SPACE &kp SPACE &kp SPACE &kp RIGHT_BRACKET>;
+            bindings = <&kp LANG2 &kp LEFT_BRACKET &kp SPACE &kp SEMI &kp SPACE &kp SPACE &kp SPACE &kp RIGHT_BRACKET>;
             label = "TMPGMW_KUHAKUGYO";
         };
 
