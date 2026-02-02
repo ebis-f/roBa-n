@@ -29,29 +29,29 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+        BT0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <5 6>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+        BT1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <6 7>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        BT2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <7 8>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        BT3 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <8 9>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        BT_CLRALL {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <32 33>;
         };
     };
 
@@ -108,7 +108,7 @@
         TMPGMW_KASIPAST: TMPGMW_KASIPAST {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LC(V) &kp LC(HOME)>;
+            bindings = <&mkp MB1 &mkp MB1 &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LC(V) &kp LC(HOME)>;
             label = "TMPGMW_KASIPAST";
         };
 
@@ -208,8 +208,6 @@
 &none       &none   &trans  &none   &trans  &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB4  &mkp MB1  &mkp MB2      &kp END
 &trans      &trans  &trans  &trans  &trans  &trans      &trans        &trans                                           &kp DELETE
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
@@ -246,8 +244,6 @@
 &trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &trans     &trans      &kp PERIOD      &kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
 &trans      &trans           &trans             &trans      &trans     &none       &trans          &trans                                                 &kp DEL
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
         };
     };
 };
