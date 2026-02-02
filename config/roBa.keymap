@@ -29,29 +29,29 @@
     combos {
         compatible = "zmk,combos";
 
-        BT0 {
+        BT_0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <5 6>;
+            key-positions = <5 7>;
         };
 
-        BT1 {
+        BT_1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <6 7>;
+            key-positions = <17 19>;
         };
 
-        BT2 {
+        BT_2 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <7 8>;
+            key-positions = <6 8>;
         };
 
-        BT3 {
+        BT_3 {
             bindings = <&bt BT_SEL 3>;
-            key-positions = <8 9>;
+            key-positions = <18 20>;
         };
 
-        BT_CLRALL {
+        BT_A_CLR {
             bindings = <&bt BT_CLR_ALL>;
-            key-positions = <32 33>;
+            key-positions = <7 9>;
         };
     };
 
@@ -226,7 +226,7 @@
 &kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                             &kp F6                   &kp F7    &TMPGMW_F8  &none         &kp HOME
 &kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)   &trans                   &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
 &kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LG(RIGHT)  &trans                   &mkp MB4  &kp LEFT    &kp DOWN      &kp END
-&PW         &trans           &trans            &trans             &trans            &trans      &none          &kp LANG_ZENKAKUHANKAKU                                      &kp DELETE
+&PW         &trans           &trans            &trans             &trans            &trans      &kp LANG2      &kp LANG_ZENKAKUHANKAKU                                      &kp DELETE
             >;
         };
 
