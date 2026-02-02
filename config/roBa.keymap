@@ -241,10 +241,10 @@
 
         GSSWORK {
             bindings = <
-&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                                  &trans       &kp N7        &kp N8        &kp N9        &kp N0
-&trans      &trans           &trans             &trans      &kp LC(PLUS)   &trans      &kp UNDERSCORE  &trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
-&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &kp LC(MINUS)  &trans      &kp PERIOD      &kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&trans      &trans           &trans             &trans      &trans         &none       &trans          &trans                                                 &kp DEL
+&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                                  &trans          &kp N7        &kp N8        &kp N9        &kp N0
+&trans      &trans           &trans             &trans      &kp LC(PLUS)   &trans      &kp UNDERSCORE  &trans          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
+&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &kp LC(MINUS)  &trans      &kp PERIOD      &kp INT_YEN     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&trans      &trans           &trans             &trans      &trans         &none       &trans          &HANKAKU_ENTER                                            &kp DEL
             >;
         };
     };
