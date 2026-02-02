@@ -87,14 +87,14 @@
         TMPGMW_KUHAKUGYO: TMPGMW_KUHAKUGYO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp LEFT_BRACKET &kp SPACE &kp SEMI &kp SPACE &kp SPACE &kp SPACE &kp RIGHT_BRACKET>;
+            bindings = <&kp LANG2 &kp LEFT_BRACKET &kp SPACE &kp SEMI &kp SPACE &kp SPACE &kp SPACE &kp RIGHT_BRACKET &kp LANG1>;
             label = "TMPGMW_KUHAKUGYO";
         };
 
         TMPGMW_KASICUT: TMPGMW_KASICUT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(END)) &kp LC(X)>;
+            bindings = <&kp LC(LS(END)) &kp LC(X) &kp UP_ARROW>;
             label = "TMPGMW_KASICUT";
         };
 
