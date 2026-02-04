@@ -126,7 +126,7 @@
                 <&kp A &kp D &kp M &kp I &kp N &kp ENTER>,
                 <&macro_wait_time 1000>,
                 <&kp ENTER>,
-                <&macro_wait_time 5000>,
+                <&macro_wait_time 10000>,
                 <&kp ENTER>,
                 <&macro_wait_time 500>,
                 <&kp ENTER>,
