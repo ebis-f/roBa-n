@@ -184,6 +184,15 @@
             tapping-term-ms = <200>;
         };
 
+        TMPGMW_Return: TMPGMW_Return {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TMPGMW_RETURN";
+            bindings = <&TMPGMW_TL_Return>, <&TMPGMW_TL_Return>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
         // Windows用：Alt + Grave (~)
 
         ime_tog: ime_toggle {
@@ -196,6 +205,20 @@
                 <&kp GRAVE>,
                 <&macro_release>,
                 <&kp LALT>;
+        };
+
+        TMPGMW_TL_Return: TMPGMW_TL_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB>;
+            label = "TMPGMW_TL_RETURN";
+        };
+
+        TMPGMW_KASI_Return: TMPGMW_KASI_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB)>;
+            label = "TMPGMW_KASI_RETURN";
         };
     };
 
@@ -253,10 +276,10 @@
 
         SCROLL {
             bindings = <
-&kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7    &TMPGMW_F8  &none         &kp LC(HOME)
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT    &kp DOWN      &kp LC(END)
-&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                           &kp DELETE
+&kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7    &TMPGMW_F8  &TMPGMW_Return 0 0  &kp LC(HOME)
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &kp LEFT    &kp UP_ARROW        &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT    &kp DOWN            &kp LC(END)
+&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                                 &kp DELETE
             >;
         };
 
