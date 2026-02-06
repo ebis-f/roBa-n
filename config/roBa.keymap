@@ -183,6 +183,20 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <200>;
         };
+
+        // Windows用：Alt + Grave (~)
+
+        ime_tog: ime_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
     };
 
     keymap {
