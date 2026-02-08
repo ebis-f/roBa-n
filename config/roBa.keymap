@@ -183,6 +183,43 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <200>;
         };
+
+        TMPGMW_Return: TMPGMW_Return {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TMPGMW_RETURN";
+            bindings = <&TMPGMW_TL_Return>, <&TMPGMW_TL_Return>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        // Windows用：Alt + Grave (~)
+
+        ime_tog: ime_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        TMPGMW_TL_Return: TMPGMW_TL_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB>;
+            label = "TMPGMW_TL_RETURN";
+        };
+
+        TMPGMW_KASI_Return: TMPGMW_KASI_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB)>;
+            label = "TMPGMW_KASI_RETURN";
+        };
     };
 
     keymap {
@@ -201,19 +238,19 @@
 
         FUNCTION {
             bindings = <
-&kp ESCAPE   &kp N7        &kp N8        &kp N9        &kp N0                                         &none           &kp F7  &kp F8  &kp F9  &kp F10
-&trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON  &trans              &kp UNDERSCORE  &none           &kp F4  &kp F5  &kp F6  &kp F11
-&kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &kp UNDERSCORE      &kp PERIOD      &trans          &kp F1  &kp F2  &kp F3  &kp F12
-&trans       &trans        &trans        &trans        &trans     &trans              &trans          &HANKAKU_ENTER                          &kp DELETE
+&kp ESCAPE   &kp N7        &kp N8        &kp N9        &kp N0                                   &none           &kp F7  &kp F8  &kp F9  &kp F10
+&trans       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON  &trans           &kp INT_YEN  &none           &kp F4  &kp F5  &kp F6  &kp F11
+&kp INT_YEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &kp AT_SIGN      &kp PERIOD   &trans          &kp F1  &kp F2  &kp F3  &kp F12
+&trans       &trans        &trans        &trans        &trans     &trans           &trans       &HANKAKU_ENTER                          &kp DELETE
             >;
         };
 
         NUM {
             bindings = <
-&kp ESCAPE  &kp N7        &kp N8        &kp N9        &kp N0                                    &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON  &kp MINUS      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&kp PLUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMI   &kp EQUAL      &kp ASTRK       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp INT_YEN
-&trans      &trans        &trans        &trans        &trans     &trans         &trans          &HANKAKU_ENTER                                                             &kp PIPE
+&kp ESCAPE     &none             &none           &none            &none                                   &kp PLUS           &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp INT_YEN
+&kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SEMI  &none       &kp UNDERSCORE    &kp COLON          &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp EQUAL
+&kp PIPE       &kp CARET         &kp TILDE       &none            &none     &kp AT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EXCLAMATION   &kp DOUBLE_QUOTES     &kp HASH               &kp QUESTION
+&trans         &trans            &trans          &trans           &trans    &trans      &trans            &HANKAKU_ENTER                                                                    &kp DEL
             >;
         };
 
@@ -239,10 +276,10 @@
 
         SCROLL {
             bindings = <
-&kp ESCAPE  &trans           &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                             &kp F6          &kp F7    &TMPGMW_F8  &none         &kp HOME
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)   &trans          &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LG(RIGHT)  &trans          &mkp MB4  &kp LEFT    &kp DOWN      &kp END
-&PW         &trans           &trans            &trans             &trans            &trans      &kp LANG2      &kp LANGUAGE_1                                      &kp DELETE
+&kp ESCAPE  &kp F14          &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7    &TMPGMW_F8  &kp F13       &kp LC(HOME)
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT    &kp DOWN      &kp LC(END)
+&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                           &kp DELETE
             >;
         };
 
@@ -257,10 +294,10 @@
 
         GSSWORK {
             bindings = <
-&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                                  &trans          &kp N7        &kp N8        &kp N9        &kp N0
-&trans      &trans           &trans             &trans      &kp LC(PLUS)   &trans      &kp UNDERSCORE  &trans          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
-&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &kp LC(MINUS)  &trans      &kp PERIOD      &kp INT_YEN     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&trans      &trans           &trans             &trans      &trans         &none       &trans          &HANKAKU_ENTER                                            &kp DEL
+&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                              &trans          &kp N7        &kp N8        &kp N9        &kp N0
+&trans      &trans           &trans             &trans      &kp LC(PLUS)   &trans      &kp UNDER   &trans          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COLON
+&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &kp LC(MINUS)  &trans      &kp PERIOD  &kp INT_YEN     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&trans      &trans           &trans             &trans      &trans         &none       &trans      &HANKAKU_ENTER                                            &kp DEL
             >;
         };
     };
