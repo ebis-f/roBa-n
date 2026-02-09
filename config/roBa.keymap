@@ -220,112 +220,142 @@
             bindings = <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB)>;
             label = "TMPGMW_KASI_RETURN";
         };
-		
+
         rdp_login_full: rdp_login_full {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-
             bindings =
-                /* Win + R */
-                <&macro_press &kp LGUI>,
-                <&macro_press &kp R>,
-                <&macro_release &kp R>,
-                <&macro_release &kp LGUI>,
-
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp LGUI>,
                 <&macro_wait_time 300>,
-
-                /* mstsc */
-                <&macro_tap &kp M>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp T>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp C>,
-                <&macro_tap &kp ENTER>,
-
-                /* mstsc 起動待ち */
+                <&macro_tap>,
+                <&kp M>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp T>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_tap>,
+                <&kp ENTER>,
                 <&macro_wait_time 1000>,
-
-                /* 接続 (Alt + C) */
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp C>,
-                <&macro_release &kp LALT>,
-
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LALT>,
                 <&macro_wait_time 700>,
-
-                /* TAB × 3 → その他 */
-                <&macro_tap &kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
                 <&macro_wait_time 100>,
-                <&macro_tap &kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
                 <&macro_wait_time 100>,
-                <&macro_tap &kp TAB>,
-
+                <&macro_tap>,
+                <&kp TAB>,
                 <&macro_wait_time 200>,
-
-                /* その他 */
-                <&macro_tap &kp ENTER>,
-
+                <&macro_tap>,
+                <&kp ENTER>,
                 <&macro_wait_time 200>,
-
-                /* 別のアカウント */
-                <&macro_tap &kp ENTER>,
-
+                <&macro_tap>,
+                <&kp ENTER>,
                 <&macro_wait_time 300>,
-
-                /* ユーザー名 */
-                <&macro_tap &kp N2>,
-                <&macro_tap &kp N2>,
-                <&macro_tap &kp N0>,
-                <&macro_tap &kp N8>,
-                <&macro_tap &kp N7>,
-                <&macro_tap &kp N7>,
-                <&macro_tap &kp AT>,
-                <&macro_tap &kp G>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp C>,
-                <&macro_tap &kp O>,
-                <&macro_tap &kp R>,
-                <&macro_tap &kp P>,
-                <&macro_tap &kp DOT>,
-                <&macro_tap &kp G>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp L>,
-                <&macro_tap &kp T>,
-                <&macro_tap &kp D>,
-                <&macro_tap &kp DOT>,
-                <&macro_tap &kp C>,
-                <&macro_tap &kp O>,
-                <&macro_tap &kp DOT>,
-                <&macro_tap &kp J>,
-                <&macro_tap &kp P>,
-
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_tap>,
+                <&kp N0>,
+                <&macro_tap>,
+                <&kp N8>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_tap>,
+                <&kp AT>,
+                <&macro_tap>,
+                <&kp G>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_tap>,
+                <&kp O>,
+                <&macro_tap>,
+                <&kp R>,
+                <&macro_tap>,
+                <&kp P>,
+                <&macro_tap>,
+                <&kp DOT>,
+                <&macro_tap>,
+                <&kp G>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp L>,
+                <&macro_tap>,
+                <&kp T>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_tap>,
+                <&kp DOT>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_tap>,
+                <&kp O>,
+                <&macro_tap>,
+                <&kp DOT>,
+                <&macro_tap>,
+                <&kp J>,
+                <&macro_tap>,
+                <&kp P>,
                 <&macro_wait_time 200>,
-
-                /* ユーザー名確定 */
-                <&macro_tap &kp ENTER>,
-
+                <&macro_tap>,
+                <&kp ENTER>,
                 <&macro_wait_time 300>,
-
-                /* パスワード */
-                <&macro_tap &kp N7>,
-                <&macro_tap &kp N7>,
-                <&macro_tap &kp AT>,
-                <&macro_tap &kp G>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp G>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp S>,
-                <&macro_tap &kp N2>,
-                <&macro_tap &kp N0>,
-                <&macro_tap &kp N1>,
-                <&macro_tap &kp N9>,
-
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_tap>,
+                <&kp AT>,
+                <&macro_tap>,
+                <&kp G>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp G>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_tap>,
+                <&kp N0>,
+                <&macro_tap>,
+                <&kp N1>,
+                <&macro_tap>,
+                <&kp N9>,
                 <&macro_wait_time 200>,
-
-                /* 接続 */
-                <&macro_tap &kp ENTER>;
+                <&macro_tap>,
+                <&kp ENTER>;
         };
     };
 
@@ -401,10 +431,10 @@
 
         GSSWORK {
             bindings = <
-&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                              &trans          &kp N7        &kp N8        &kp N9        &kp N0
-&trans      &trans           &trans             &trans      &kp LC(PLUS)   &trans      &kp UNDER   &kp COLON       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&trans      &kp LA(LS(F12))  &GSSMAP_RM         &trans      &kp LC(MINUS)  &trans      &kp PERIOD  &kp INT_YEN     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&trans      &trans           &trans             &trans      &trans         &none       &trans      &HANKAKU_ENTER                                            &kp DEL
+&kp ESCAPE       &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN  &GSS_WIFI                              &trans          &kp N7        &kp N8        &kp N9        &kp N0
+&trans           &trans           &trans             &trans      &kp LC(PLUS)   &trans      &kp UNDER   &kp COLON       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&rdp_login_full  &kp LA(LS(F12))  &GSSMAP_RM         &trans      &kp LC(MINUS)  &trans      &kp PERIOD  &kp INT_YEN     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&trans           &trans           &trans             &trans      &trans         &none       &trans      &HANKAKU_ENTER                                            &kp DEL
             >;
         };
     };
