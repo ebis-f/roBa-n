@@ -220,10 +220,8 @@
             bindings = <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB)>;
             label = "TMPGMW_KASI_RETURN";
         };
-
-/ {
-    macros {
-        rdp_login_full: rdp_login_full {
+		
+		        rdp_login_full: rdp_login_full {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
