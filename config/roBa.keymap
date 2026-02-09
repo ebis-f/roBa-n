@@ -229,7 +229,15 @@
                 <&macro_wait_time 200>,
                 <&kp TAB>,
                 <&macro_wait_time 200>,
-                <&kp N7 &kp N7 &kp LEFT_BRACKET &kp G &kp S &kp S &kp LS(G) &kp LS(S) &kp LS(S) &kp NUMBER_2 &kp N0 &kp NUMBER_1 &kp N9>,
+                <&kp N7 &kp N7 &kp LEFT_BRACKET>,
+                <&macro_tap>,
+                <&kp G>,
+                <&macro_press>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_tap>,
+                <&kp LS(G) &kp LS(S) &kp LS(S) &kp NUMBER_2 &kp N0 &kp NUMBER_1 &kp N9>,
                 <&macro_wait_time 200>,
                 <&kp ENTER>;
 
