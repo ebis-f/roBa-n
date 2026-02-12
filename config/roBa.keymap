@@ -184,10 +184,10 @@
             tapping-term-ms = <200>;
         };
 
-        TMPGMW_Return: TMPGMW_Return {
+        ime_behavior: ime_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "TMPGMW_RETURN";
-            bindings = <&TMPGMW_TL_Return>, <&TMPGMW_TL_Return>;
+            label = "IME_BEHAVIOR";
+            bindings = <&kp>, <&ime_tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -246,10 +246,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E                           &kp R        &kp T                                                        &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D                           &kp F        &kp G            &kp LS(LG(S))      &kp COMMA                &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C                           &kp V        &kp B            &kp AT_SIGN        &kp PERIOD               &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &macro_tap_behavior LEFT_ALT 0  &lt 2 SPACE  &lt 5 LS(SPACE)  &lt 7 TAB          &mt RIGHT_ALT RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
+&kp Q             &kp W         &kp E                           &kp R        &kp T                                                          &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D                           &kp F        &kp G            &kp LS(LG(S))      &kp COMMA                  &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C                           &kp V        &kp B            &kp AT_SIGN        &kp PERIOD                 &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &macro_tap_behavior LEFT_ALT 0  &lt 2 SPACE  &lt 5 LS(SPACE)  &lt 7 TAB          &ime_behavior RIGHT_ALT 0  &lt 1 ENTER                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -295,10 +295,10 @@
 
         SCROLL {
             bindings = <
-&kp ESCAPE  &kp F14          &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7    &TMPGMW_F8  &kp F13       &kp LC(HOME)
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT    &kp DOWN      &kp LC(END)
-&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                           &kp DELETE
+&kp ESCAPE  &kp F14          &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6          &kp F7    &TMPGMW_F8  &kp F13       &kp LC(HOME)
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)  &kp LG(RIGHT)   &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT    &kp DOWN      &kp LC(END)
+&PW         &trans           &trans            &trans             &trans            &trans      &none         &HANKAKU_ENTER                                      &kp DELETE
             >;
         };
 
