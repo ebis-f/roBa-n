@@ -273,13 +273,14 @@
             >;
         };
 
-        ARROW {
+        CREATOR {
             bindings = <
-&kp ESCAPE  &none   &none   &none   &trans                            &trans         &trans    &trans          &none         &kp HOME
-&none       &none   &none   &none   &none   &trans      &trans        &trans         &mkp MB5  &none           &kp UP_ARROW  &kp RIGHT
-&none       &none   &trans  &none   &trans  &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &kp END
-&trans      &trans  &trans  &trans  &trans  &trans      &trans        &trans                                                 &kp DELETE
+&kp ESCAPE  &kp F14          &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7    &TMPGMW_F8  &kp F13       &kp LC(HOME)
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &kp LEFT    &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT    &kp DOWN      &kp LC(END)
+&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                           &kp DELETE
             >;
+        };
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
