@@ -275,10 +275,10 @@
 
         CREATOR {
             bindings = <
-&kp ESCAPE  &none            &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7   &TMPGMW_F8    &kp F13       &kp F14
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &none         &none          &kp F15  &kp LEFT      &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &none    &kp LC(HOME)  &kp DOWN      &kp LC(END)
-&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                            &kp DELETE
+&kp ESCAPE  &none            &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                            &kp F6         &kp F7   &TMPGMW_F8      &kp F13       &kp F14
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &none         &none          &kp F15  &none           &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)  &kp LS(RIGHT)  &none    &kp LEFT_ARROW  &kp DOWN      &kp HOME
+&PW         &trans           &trans            &trans             &trans            &trans      &none         &ime_tog                                              &kp DELETE
             >;
         };
 
@@ -293,9 +293,9 @@
 
         SCROLL {
             bindings = <
-&kp ESCAPE  &none           &none      &trans    &none                                                &none          &none     &none     &none         &kp LC(HOME)
+&kp ESCAPE  &none           &none      &trans    &none                                                &none          &none     &none     &none         &kp HOME
 &kp LEFT    &kp UP_ARROW    &none      &mkp MB5  &kp LG(LEFT)        &trans             &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &none     &kp UP_ARROW  &kp RIGHT
-&none       &kp DOWN_ARROW  &kp RIGHT  &mkp MB4  &kp LS(LEFT_ARROW)  &kp LS(RIGHT)      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT  &kp DOWN      &kp LC(END)
+&none       &kp DOWN_ARROW  &kp RIGHT  &mkp MB4  &kp LS(LEFT_ARROW)  &kp LS(RIGHT)      &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &kp LEFT  &kp DOWN      &kp END
 &PW         &trans          &trans     &trans    &trans              &trans             &none         &ime_tog                                         &kp DELETE
             >;
         };
