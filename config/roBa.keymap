@@ -285,8 +285,8 @@
 
         CREATOR {
             bindings = <
-&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                              &kp F6         &kp F7    &TMPGMW_F8      &none         &mt LC(HOME) HOME
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp UNDERSCORE  &none          &none     &kp LEFT        &kp UP_ARROW  &kp RIGHT
+&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &TMPGMW_MAEzoroe                              &kp F6         &kp F7    &TMPGMW_F8      &kp F13       &mt LC(HOME) HOME
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &trans            &trans      &kp UNDERSCORE  &none          &kp F14   &none           &kp UP_ARROW  &kp RIGHT
 &kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LC(B)         &trans      &kp LS(LEFT)    &kp LS(RIGHT)  &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
 &PW         &trans           &trans            &trans             &trans            &trans      &none           &ime_tog                                               &kp DELETE
             >;
