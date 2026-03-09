@@ -274,7 +274,7 @@
             >;
         };
 
-        NUM {
+        CHARA {
             bindings = <
 &kp ESCAPE  &kp CARET       &kp TILDE  &kp LEFT_BRACE    &kp RIGHT_BRACE                                &kp PLUS        &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp INT_YEN
 &kp LEFT    &kp UP_ARROW    &kp RIGHT  &kp LESS_THAN     &kp GREATER_THAN   &none       &kp UNDERSCORE  &kp COLON       &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp EQUAL
