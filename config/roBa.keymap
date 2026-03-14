@@ -49,11 +49,6 @@
             key-positions = <18 20>;
         };
 
-        BT_CLR {
-            bindings = <&bt BT_CLR>;
-            key-positions = <9 5>;
-        };
-
         TMPGMW_RUBI {
             bindings = <&kp F13>;
             key-positions = <19 20>;
@@ -64,9 +59,14 @@
             key-positions = <21 19>;
         };
 
-        BT_CLR {
+        BT_ACLR {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <40 42>;
+        };
+
+        BT_1_CLR {
+            bindings = <&bt BT_CLR>;
+            key-positions = <5 9>;
         };
     };
 
