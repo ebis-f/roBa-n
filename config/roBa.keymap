@@ -49,8 +49,8 @@
             key-positions = <18 20>;
         };
 
-        BT_A_CLR {
-            bindings = <&bt BT_CLR_ALL>;
+        BT_CLR {
+            bindings = <&bt BT_CLR>;
             key-positions = <7 9>;
         };
 
@@ -61,7 +61,12 @@
 
         TMPGMW_Color {
             bindings = <&kp F14>;
-            key-positions = <20 21>;
+            key-positions = <21 19>;
+        };
+
+        BT_CLR {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <40 42>;
         };
     };
 
