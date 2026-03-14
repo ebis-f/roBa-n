@@ -51,7 +51,7 @@
 
         BT_CLR {
             bindings = <&bt BT_CLR>;
-            key-positions = <7 9>;
+            key-positions = <9 5>;
         };
 
         TMPGMW_RUBI {
