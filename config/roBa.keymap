@@ -56,7 +56,7 @@
 
         TMPGMW_Color {
             bindings = <&kp F14>;
-            key-positions = <21 19>;
+            key-positions = <19 18>;
         };
 
         BT_ACLR {
@@ -67,6 +67,16 @@
         BT_1_CLR {
             bindings = <&bt BT_CLR>;
             key-positions = <5 9>;
+        };
+
+        Move_left {
+            bindings = <&kp F20>;
+            key-positions = <10 11>;
+        };
+
+        Move_Right {
+            bindings = <&kp F21>;
+            key-positions = <20 21>;
         };
     };
 
