@@ -54,11 +54,6 @@
             key-positions = <19 20>;
         };
 
-        TMPGMW_Color {
-            bindings = <&kp F14>;
-            key-positions = <19 18>;
-        };
-
         BT_ACLR {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <40 42>;
@@ -312,9 +307,9 @@
 
         CREATOR {
             bindings = <
-&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LA(T)                            &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp LA(G)  &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LA(B)  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
+&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                            &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp LG(G)  &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(B)  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
 &PW         &trans           &trans            &trans             &trans     &trans      &none         &ime_tog                                                &kp DELETE
             >;
         };
