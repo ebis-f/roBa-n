@@ -268,7 +268,7 @@
         TMPG_RUBITOJI: TMPG_RUBITOJI {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE &kp RIGHT_BRACKET>;
+            bindings = <&kp BACKSPACE &kp RIGHT_BRACKET &kp F10 &kp ENTER>;
             label = "TMPG_RUBITOJI";
         };
     };
