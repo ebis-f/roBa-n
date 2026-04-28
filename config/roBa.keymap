@@ -66,7 +66,7 @@
 
         Move_left {
             bindings = <&kp F20>;
-            key-positions = <10 11 22>;
+            key-positions = <10 11>;
         };
 
         Move_Right {
@@ -268,7 +268,7 @@
         TMPG_RUBITOJI: TMPG_RUBITOJI {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE &kp RIGHT_BRACKET>;
+            bindings = <&kp BACKSPACE &kp RIGHT_BRACKET &kp F10 &kp ENTER>;
             label = "TMPG_RUBITOJI";
         };
     };
@@ -307,10 +307,10 @@
 
         CREATOR {
             bindings = <
-&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(LA(T))                            &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp LG(LA(G))  &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(LA(B))  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
-&PW         &trans           &trans            &trans             &trans         &trans      &none         &ime_tog                                                &kp DELETE
+&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                                     &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp F14             &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(DOWN_ARROW)  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
+&PW         &trans           &trans            &trans             &trans              &trans      &none         &ime_tog                                                &kp DELETE
             >;
         };
 
