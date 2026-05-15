@@ -290,7 +290,7 @@
         FUNCTION {
             bindings = <
 &kp ESCAPE  &none   &none      &none   &none                               &none           &kp F7  &kp F8  &kp F9  &kp F10
-&none       &none   &kp LG(D)  &none   &none   &trans      &kp UNDERSCORE  &none           &kp F4  &kp F5  &kp F6  &kp F11
+&none       &none   &kp LG(H)  &none   &none   &trans      &kp UNDERSCORE  &none           &kp F4  &kp F5  &kp F6  &kp F11
 &none       &none   &none      &none   &none   &none       &kp PERIOD      &trans          &kp F1  &kp F2  &kp F3  &kp F12
 &trans      &trans  &trans     &trans  &trans  &trans      &trans          &HANKAKU_ENTER                          &kp DELETE
             >;
