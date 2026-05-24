@@ -268,10 +268,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                                          &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G            &kp LS(LG(S))      &kp COMMA                  &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B            &kp AT_SIGN        &kp PERIOD                 &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LS(SPACE)  &lt 7 TAB          &ime_behavior RIGHT_ALT 0  &lt 1 ENTER                             &kp BACKSPACE
+&kp Q             &kp W         &kp E         &kp R        &kp T                                                        &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F        &kp G            &kp LS(LG(S))      &kp COMMA                &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B            &kp AT_SIGN        &kp PERIOD               &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LS(SPACE)  &lt 7 TAB          &mt RIGHT_ALT RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -288,10 +288,10 @@
 
         CHARA {
             bindings = <
-&kp ESCAPE  &kp CARET       &kp TILDE  &kp LEFT_BRACE    &kp RIGHT_BRACE                                &kp PLUS   &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp INT_YEN
-&kp LEFT    &kp UP_ARROW    &kp RIGHT  &kp LESS_THAN     &kp GREATER_THAN   &none       &kp UNDERSCORE  &kp COLON  &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp EQUAL
-&kp PIPE    &kp DOWN_ARROW  &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AT      &kp PERIOD      &kp SEMI   &kp EXCLAMATION   &kp DOUBLE_QUOTES     &kp HASH               &kp QUESTION
-&trans      &trans          &trans     &trans            &trans             &trans      &trans          &none                                                                     &kp DEL
+&kp ESCAPE  &kp CARET       &kp TILDE  &kp LEFT_BRACE    &kp RIGHT_BRACE                                &kp PLUS        &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp INT_YEN
+&kp LEFT    &kp UP_ARROW    &kp RIGHT  &kp LESS_THAN     &kp GREATER_THAN   &none       &kp UNDERSCORE  &kp COLON       &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp EQUAL
+&kp PIPE    &kp DOWN_ARROW  &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AT      &kp PERIOD      &kp SEMI        &kp EXCLAMATION   &kp DOUBLE_QUOTES     &kp HASH               &kp QUESTION
+&trans      &trans          &trans     &trans            &trans             &trans      &trans          &HANKAKU_ENTER                                                                 &kp DEL
             >;
         };
 
@@ -300,7 +300,7 @@
 &kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                                     &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
 &kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp F14             &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
 &kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(DOWN_ARROW)  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
-&PW         &trans           &trans            &trans             &trans              &trans      &none         &kp RIGHT_WIN                                           &kp DELETE
+&PW         &trans           &trans            &trans             &trans              &trans      &none         &ime_tog                                                &kp DELETE
             >;
         };
 
@@ -333,10 +333,10 @@
 
         GSSWORK {
             bindings = <
-&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN        &GSS_WIFI                                  &kp PLUS   &kp N7        &kp N8        &kp N9        &kp N0
-&trans      &kp LC(S)        &trans             &kp LS(F)         &kp INT_YEN        &trans      &kp UNDER   &kp COLON  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp LC(Z)   &kp LA(LS(F12))  &GSSMAP_RM         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &kp PERIOD  &kp SEMI   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&kp F24     &trans           &trans             &trans            &trans             &none       &trans      &none                                                &kp DEL
+&kp ESCAPE  &kp LS(F10)      &GSS_LOCALACCOUNT  &GSS_ADMIN        &GSS_WIFI                                  &kp PLUS        &kp N7        &kp N8        &kp N9        &kp N0
+&trans      &kp LC(S)        &trans             &kp LS(F)         &kp INT_YEN        &trans      &kp UNDER   &kp COLON       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&kp LC(Z)   &kp LA(LS(F12))  &GSSMAP_RM         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &kp PERIOD  &kp SEMI        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&kp F24     &trans           &trans             &trans            &trans             &none       &trans      &HANKAKU_ENTER                                            &kp DEL
             >;
         };
     };
