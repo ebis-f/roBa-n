@@ -133,7 +133,7 @@
         TMPGMW_KASIPAST: TMPGMW_KASIPAST {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1 &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LC(V) &kp LC(HOME)>;
+            bindings = <&mkp MB1 &mkp MB1 &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp LC(V) &kp LC(HOME)>;
             label = "TMPGMW_KASIPAST";
         };
 
