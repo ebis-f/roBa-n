@@ -268,10 +268,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                                                &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G            &mt LS(LG(S)) LCTRL      &kp COMMA                  &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B            &kp AT_SIGN              &kp PERIOD                 &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LS(SPACE)  &lt 7 TAB                &ime_behavior RIGHT_ALT 0  &lt 1 ENTER                             &kp BACKSPACE
+&kp Q             &kp W         &kp E         &kp R        &kp T                                                              &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F        &kp G            &mt LS(LG(S)) LCTRL      &kp COMMA                &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B            &kp AT_SIGN              &kp PERIOD               &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LS(SPACE)  &lt 7 TAB                &mt RIGHT_ALT RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -300,7 +300,7 @@
 &kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                                     &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
 &kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp F14             &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
 &kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(DOWN_ARROW)  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
-&PW         &trans           &trans            &trans             &trans              &trans      &none         &kp RIGHT_WIN                                           &kp DELETE
+&PW         &trans           &trans            &trans             &trans              &trans      &none         &ime_tog                                                &kp DELETE
             >;
         };
 
@@ -318,7 +318,7 @@
 &kp ESCAPE  &none           &none      &trans    &none                                                 &none          &none     &none     &none         &mt LC(HOME) HOME
 &kp LEFT    &kp UP_ARROW    &kp RIGHT  &mkp MB5  &kp LG(LEFT)        &kp LG(RIGHT)       &kp LG(LEFT)  &kp LG(RIGHT)  &mkp MB5  &kp LEFT  &kp UP_ARROW  &kp RIGHT
 &none       &kp DOWN_ARROW  &none      &mkp MB4  &kp LS(LEFT_ARROW)  &kp LS(RIGHT)       &kp LS(LEFT)  &kp LS(RIGHT)  &mkp MB4  &none     &kp DOWN      &mt LC(END) END
-&PW         &trans          &trans     &trans    &trans              &kp LA(LS(F4))      &none         &kp LA(F4)                                       &kp DELETE
+&none       &trans          &trans     &trans    &trans              &kp LA(LS(F4))      &none         &kp LA(F4)                                       &kp DELETE
             >;
         };
 
