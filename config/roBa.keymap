@@ -265,7 +265,7 @@
         AndroidText: AndroidText {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1 &kp N0>;
+            bindings = <&kp LANG2 &kp N1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>;
             label = "ANDROIDTEXT";
         };
     };
