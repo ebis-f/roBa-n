@@ -261,6 +261,13 @@
             bindings = <&kp BACKSPACE &kp RIGHT_BRACKET &kp F10 &kp ENTER>;
             label = "TMPG_RUBITOJI";
         };
+
+        AndroidText: AndroidText {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1 &kp N0>;
+            label = "ANDROIDTEXT";
+        };
     };
 
     keymap {
@@ -333,10 +340,10 @@
 
         GSSWORK {
             bindings = <
-&kp ESCAPE  &none            &none       &none             &none                                      &kp PLUS        &kp N7        &kp N8        &kp N9        &kp N0
-&trans      &kp LC(S)        &trans      &kp LS(F)         &kp INT_YEN        &trans      &kp UNDER   &kp COLON       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp LC(Z)   &kp LA(LS(F12))  &GSSMAP_RM  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &kp PERIOD  &kp SEMI        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-&kp F24     &trans           &trans      &trans            &trans             &none       &trans      &HANKAKU_ENTER                                            &kp DEL
+&kp ESCAPE  &none            &none       &none             &none                                            &kp PLUS        &kp N7        &kp N8        &kp N9        &kp N0
+&trans      &kp LC(S)        &trans      &kp LS(F)         &kp INT_YEN        &trans            &kp UNDER   &kp COLON       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&kp LC(Z)   &kp LA(LS(F12))  &GSSMAP_RM  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &AndroidText      &kp PERIOD  &kp SEMI        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&kp F24     &trans           &trans      &trans            &trans             &none             &trans      &HANKAKU_ENTER                                            &kp DEL
             >;
         };
     };
