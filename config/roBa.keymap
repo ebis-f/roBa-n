@@ -262,21 +262,24 @@
             label = "TMPG_RUBITOJI";
         };
 
-         AndroidText: AndroidText {
+        AndroidText: AndroidText {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <30>;
             bindings =
-                /* ASTRK を KP_MULTIPLY に変更（Shift判定を回避） */
-                <&kp N1 &kp N0 &kp PERIOD &kp KP_MULTIPLY &kp COMMA>,
-                <&kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA>,
-                <&kp KP_MULTIPLY &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD>,
-                <&kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
+                <&kp N1 &kp N0 &kp PERIOD &kp KP_MULTIPLY &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp KP_MULTIPLY &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
                 <&macro_wait_time 100>,
                 <&kp F10 &kp ENTER>;
 
             label = "ANDROIDTEXT";
+        };
+
+        KIT: KIT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>;
+            label = "KIT";
         };
     };
 
@@ -285,10 +288,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T                                                       &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F        &kp G            &AndroidText      &kp COMMA                &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B            &kp AT_SIGN       &kp PERIOD               &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LS(SPACE)  &lt 7 TAB         &mt RIGHT_ALT RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
+&kp Q             &kp W         &kp E         &kp R        &kp T                                                      &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F        &kp G            &KIT             &kp COMMA                &kp H        &kp J  &kp K     &kp L     &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B            &kp AT_SIGN      &kp PERIOD               &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LS(SPACE)  &lt 7 TAB        &mt RIGHT_ALT RIGHT_WIN  &lt 1 ENTER                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -314,10 +317,10 @@
 
         CREATOR {
             bindings = <
-&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                                     &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
-&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp F14             &trans      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
-&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(DOWN_ARROW)  &trans      &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
-&PW         &trans           &trans            &trans             &trans              &trans      &none         &ime_tog                                                &kp DELETE
+&kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                                            &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
+&kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp F14             &kp LS(LG(S))      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
+&kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(DOWN_ARROW)  &trans             &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
+&PW         &trans           &trans            &trans             &trans              &trans             &none         &ime_tog                                                &kp DELETE
             >;
         };
 
