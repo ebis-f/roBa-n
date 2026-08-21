@@ -265,13 +265,16 @@
 AndroidText: AndroidText {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>; /* 安定性を高めるため40にアップ */
-            tap-ms = <40>;  /* 同上 */
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
-                <&kp N1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
-                <&macro_wait_time 100>, /* 最後のgを入力し終えた後、OSの処理を少し待つ */
-                <&kp F10 &kp ENTER>;
-
+                /* &macro_tap を使うことで強制的に「押す→離す」の動作を確約させる */
+                <&macro_tap &kp N1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA>,
+                <&macro_tap &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA>,
+                <&macro_tap &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD>,
+                <&macro_tap &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
+                <&macro_wait_time 200>, /* gの後、確実に待つ */
+                <&macro_tap &kp F10 &kp ENTER>; /* F10が原因か疑わしい場合はここを消す */
             label = "ANDROIDTEXT";
         };
     };
