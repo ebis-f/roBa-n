@@ -262,15 +262,14 @@
             label = "TMPG_RUBITOJI";
         };
 
-        AndroidText: AndroidText {
+AndroidText: AndroidText {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>; /* 次のキーを入力するまでの待機時間(ミリ秒) */
-            tap-ms = <30>;  /* キーを押しっぱなしにする時間(ミリ秒) */
+            wait-ms = <40>; /* 安定性を高めるため40にアップ */
+            tap-ms = <40>;  /* 同上 */
             bindings =
                 <&kp N1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
-                <&macro_release>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 100>, /* 最後のgを入力し終えた後、OSの処理を少し待つ */
                 <&kp F10 &kp ENTER>;
 
             label = "ANDROIDTEXT";
