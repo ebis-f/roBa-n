@@ -81,7 +81,7 @@
 
         pw {
             bindings = <&PW>;
-            key-positions = <0 1>;
+            key-positions = <9 1>;
         };
     };
 
