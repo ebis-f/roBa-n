@@ -78,6 +78,11 @@
             bindings = <&kp F16>;
             key-positions = <17 18>;
         };
+
+        pw {
+            bindings = <&PW>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
@@ -262,23 +267,10 @@
             label = "TMPG_RUBITOJI";
         };
 
-        AndroidText: AndroidText {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-            bindings =
-                <&kp N1 &kp N0 &kp PERIOD &kp KP_MULTIPLY &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp KP_MULTIPLY &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
-                <&macro_wait_time 100>,
-                <&kp F10 &kp ENTER>;
-
-            label = "ANDROIDTEXT";
-        };
-
         KIT: KIT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>;
+            bindings = <&kp NUMBER_1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA &kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA &kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD &kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G &kp ESCAPE>;
             label = "KIT";
         };
     };
@@ -320,7 +312,7 @@
 &kp ESCAPE  &kp F15          &TMPGMW_Cut       &trans             &kp LG(T)                                            &kp F6          &kp F7    &TMPGMW_F8      &kp F19       &mt LC(HOME) HOME
 &kp LC(A)   &TMPGMW_KASICUT  &TMPGMW_KASIPAST  &TMPGMW_KUHAKUGYO  &kp F14             &kp LS(LG(S))      &kp F18       &TMPG_RUBITOJI  &none     &none           &kp UP_ARROW  &kp RIGHT
 &kp LC(Z)   &kp LC(X)        &kp LC(C)         &kp LC(V)          &kp LG(DOWN_ARROW)  &trans             &kp LS(LEFT)  &kp LS(RIGHT)   &mkp MB4  &kp LEFT_ARROW  &kp DOWN      &mt LC(END) END
-&PW         &trans           &trans            &trans             &trans              &trans             &none         &ime_tog                                                &kp DELETE
+&none       &trans           &trans            &trans             &trans              &trans             &none         &ime_tog                                                &kp DELETE
             >;
         };
 
