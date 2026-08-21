@@ -277,9 +277,10 @@
                 <&macro_tap>,
                 <&kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
                 <&macro_wait_time 200>,
-                <&macro_tap>,
-                <&kp F10 &kp ENTER>;
- /* F10が原因か疑わしい場合はここを消す */
+                <&macro_tap>;
+
+            /* F10が原因か疑わしい場合はここを消す */
+
             label = "ANDROIDTEXT";
         };
     };
