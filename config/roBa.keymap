@@ -78,6 +78,11 @@
             bindings = <&kp F16>;
             key-positions = <17 18>;
         };
+
+        PW {
+            bindings = <&PW>;
+            key-positions = <27 15>;
+        };
     };
 
     macros {
