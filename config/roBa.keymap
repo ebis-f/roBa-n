@@ -262,24 +262,19 @@
             label = "TMPG_RUBITOJI";
         };
 
-        AndroidText: AndroidText {
+         AndroidText: AndroidText {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings =
-                <&macro_tap>,
-                <&kp N1 &kp N0 &kp PERIOD &kp ASTRK &kp COMMA>,
-                <&macro_tap>,
+                /* ASTRK を KP_MULTIPLY に変更（Shift判定を回避） */
+                <&kp N1 &kp N0 &kp PERIOD &kp KP_MULTIPLY &kp COMMA>,
                 <&kp L &kp O &kp C &kp A &kp L &kp H &kp O &kp S &kp T &kp COMMA>,
-                <&macro_tap>,
-                <&kp ASTRK &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD>,
-                <&macro_tap>,
+                <&kp KP_MULTIPLY &kp PERIOD &kp I &kp N &kp T &kp R &kp A &kp PERIOD>,
                 <&kp T &kp K &kp G &kp MINUS &kp J &kp P &kp PERIOD &kp O &kp R &kp G>,
-                <&macro_wait_time 200>,
-                <&macro_tap>;
-
-            /* F10が原因か疑わしい場合はここを消す */
+                <&macro_wait_time 100>,
+                <&kp F10 &kp ENTER>;
 
             label = "ANDROIDTEXT";
         };
