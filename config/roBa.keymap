@@ -88,6 +88,11 @@
             bindings = <&lt 5 RIGHT_SHIFT>;
             key-positions = <31 32>;
         };
+
+        PIN {
+            bindings = <&PIN>;
+            key-positions = <42 33>;
+        };
     };
 
     macros {
@@ -280,6 +285,13 @@
                 <&macro_wait_time 100000>;
 
             label = "KIT";
+        };
+
+        PIN: PIN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp NUMBER_2 &kp N7 &kp ENTER>;
+            label = "PIN";
         };
     };
 
