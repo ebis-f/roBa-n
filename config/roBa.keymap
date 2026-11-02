@@ -108,7 +108,7 @@
         PW: PW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp NUMBER_2 &kp N7>;
+            bindings = <&kp N7 &kp N7 &kp LBKT &kp G &kp S &kp S &kp LS(G) &kp LS(S) &kp LS(S) &kp N2 &kp N0 &kp N1 &kp N9>;
             label = "PW";
         };
 
